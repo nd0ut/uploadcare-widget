@@ -2,6 +2,7 @@
   "name": "uploadcare-widget",
   "version": "0.0.0",
   "description": "Source of Uploadcare Widget",
+  "main": "pkg/latest/uploadcare.min.js",  
   "scripts": {
     "lint:css": "stylelint app/**/*.pcss",
     "lint:js": "eslint .",
