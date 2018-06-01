@@ -1,6 +1,7 @@
 {
   ui: {progress: {Circle}},
-  jQuery: $
+  jQuery: $,
+  utils
 } = uploadcare
 
 uploadcare.namespace 'widget.tabs', (ns) ->
@@ -12,6 +13,10 @@ uploadcare.namespace 'widget.tabs', (ns) ->
       @container.addClass('uploadcare--preview')
 
       notDisabled = ':not(:disabled)'
+      @container.on 'click', '.uploadcare--preview__add' + notDisabled, =>
+        utils.fileSelectDialog @container, @settings, (input) =>
+          @dialogApi.addFiles('object', input.files)
+          @dialogApi.switchTab('preview')
       @container.on 'click', '.uploadcare--preview__back' + notDisabled, =>
         @dialogApi.fileColl.clear()
       @container.on('click', '.uploadcare--preview__done' + notDisabled, @dialogApi.resolve)
