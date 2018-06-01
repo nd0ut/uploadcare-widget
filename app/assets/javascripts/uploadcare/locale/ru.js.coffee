@@ -113,6 +113,7 @@ uploadcare.namespace 'locale.translations', (ns) ->
             tooManyFiles: 'Вы выбрали слишком много файлов. %max% максимум.'
             tooFewFiles: 'Вы выбрали %files%. Нужно не меньше %min%.'
             clear: 'Удалить все'
+            add: 'Загрузить еще фотографии'
             done: 'Добавить'
             file:
               preview: 'Предпросмотр %file%'
